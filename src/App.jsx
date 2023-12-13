@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-import Root from './routes/Root';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
 import Persons from './routes/Persons';
+import Root from './routes/Root';
 import ErrorPage from './routes/ErrorPage';
+import Posts from './routes/Posts';
 
 function App() {
   const [persons, setPersons] = useState([
@@ -30,14 +30,15 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { path: '/', element: <Home /> },
+        { path: '/posts', element: <Posts /> },
         {
           path: '/persons',
           element: (
             <Persons
+              searchHandler={searchHandler}
+              removeHandler={removeHandler}
               search={search}
               persons={persons}
-              removeHandler={removeHandler}
-              searchHandler={searchHandler}
             />
           ),
         },
@@ -45,11 +46,7 @@ function App() {
     },
   ]);
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -21,16 +21,11 @@
 
 a {
   font-weight: 500;
-  color: rgb(0, 98, 255);
+  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
-  color: rgb(96, 157, 255);
-}
-
-a.active {
-  color: rgb(96, 157, 255);
-  border-bottom: 2px solid rgb(96, 157, 255);
+  color: #535bf2;
 }
 
 body {
@@ -71,15 +66,9 @@ footer {
 header h1 {
   font-size: 1rem;
 }
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 
 main {
-  min-height: calc(100vh - 180px);
-  padding: 2rem;
+  height: 100vh;
   background: url('./assets/bg.jpeg') no-repeat fixed center center/cover;
 }
 
@@ -122,6 +111,7 @@ input {
   font-family: inherit;
   padding: 0.5rem;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -130,4 +120,30 @@ header {
 nav ul li {
   display: inline-block;
   margin: 1rem;
+}
+
+a.active {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.post {
+  background-color: white;
+  border-radius:10px;
+  box-shadow: 5px 5px 25px #4b4b4b;
+  padding: 1rem;
+  max-width: 33%;
+  color: #333
 }
