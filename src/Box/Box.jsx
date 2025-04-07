@@ -1,3 +1,4 @@
+import "./Box.css";
 const Box = (props) => {
   return (
     <div className="box">
@@ -5,6 +6,7 @@ const Box = (props) => {
       <p>{props.title}</p>
       <p>{props.myAnimal}</p>
       <p>{props.age}</p>
+      <p>ID: {props.id}</p>
     </div>
   );
 };
