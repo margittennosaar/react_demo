@@ -1,3 +1,4 @@
+import "./Header.css";
 const Header = (props) => {
   return (
     <header>
@@ -8,6 +9,7 @@ const Header = (props) => {
         <ul>
           <li>Home</li>
           <li>Persons</li>
+          <li>Books</li>
           <li>About</li>
         </ul>
       </nav>
