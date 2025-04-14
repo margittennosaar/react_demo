@@ -1,15 +1,24 @@
+import { useState } from "react";
 import "./Books.css";
 
-const BookCard = (props) => {
+const BookCard = ({
+  title,
+  author,
+  price,
+  genre,
+  inStock,
+  isFavorite,
+  ...rest
+}) => {
   return (
     <div className="bookCard">
-      <h2>{props.title}</h2>
-      <p>{props.author}</p>
-      <p>{props.price}€</p>
-      <p>{props.genre}</p>
-      <p>{props.inStock ? "In stock" : "Out of Stock"}</p>
-
-      {!props.inStock && <button>Add to Wishlist</button>}
+      <h2>{title}</h2>
+      <p>{isFavorite ? "♥️" : "♡"}</p>
+      <p>{author}</p>
+      <p>{price}€</p>
+      <p>{genre}</p>
+      <p>{inStock ? "In stock" : "Out of Stock"}</p>
+      {!inStock && <button>Add to Wishlist</button>}
     </div>
   );
 };

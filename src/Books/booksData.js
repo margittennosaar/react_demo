@@ -5,6 +5,7 @@ export const books = [
         author: "Antoine de Saint-Exupéry",
         price: 12.99,
         inStock: true,
+        isFavorite: true,
         genre: "Classic Fiction"
     },
     {
@@ -13,6 +14,7 @@ export const books = [
         author: "Paulo Coelho",
         price: 14.5,
         inStock: true,
+        isFavorite: false,
         genre: "Philosophical Fiction"
     },
     {
@@ -21,6 +23,7 @@ export const books = [
         author: "Mikhail Bulgakov",
         price: 18.0,
         inStock: false,
+        isFavorite: true,
         genre: "Literary Fiction"
     },
     {
@@ -29,6 +32,7 @@ export const books = [
         author: "Neil Gaiman & Terry Pratchett",
         price: 16.75,
         inStock: true,
+        isFavorite: true,
         genre: "Fantasy Comedy"
     },
     {
@@ -37,6 +41,7 @@ export const books = [
         author: "J.K. Rowling",
         price: 10.99,
         inStock: false,
+        isFavorite: true,
         genre: "Fantasy"
     },
     {
@@ -45,6 +50,7 @@ export const books = [
         author: "A. H. Tammsaare",
         price: 21.0,
         inStock: true,
+        isFavorite: true,
         genre: "Estonian Classic"
     },
     {
@@ -53,6 +59,7 @@ export const books = [
         author: "Anders Hansen",
         price: 17.5,
         inStock: true,
+        isFavorite: true,
         genre: "Health & Psychology"
     },
     {
@@ -61,6 +68,7 @@ export const books = [
         author: "Gary John Bishop",
         price: 13.25,
         inStock: false,
+        isFavorite: false,
         genre: "Self-Help"
     },
     {
@@ -69,6 +77,7 @@ export const books = [
         author: "Mel Robbins",
         price: 15.99,
         inStock: true,
+        isFavorite: true,
         genre: "Motivational"
     },
     {
@@ -77,6 +86,7 @@ export const books = [
         author: "Rebecca Yarros",
         price: 19.5,
         inStock: true,
+        isFavorite: true,
         genre: "Romantic Fantasy"
     }
 ];
