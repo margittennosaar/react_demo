@@ -1,13 +1,76 @@
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+}
+
 .bookCard {
   background-color: white;
   color: #333;
   margin: 1rem;
-  padding: 1rem;
   border-radius: 10px;
-  width: 25%;
+  width: 30%;
   min-height: 200px;
+  position: relative;
 }
 
 .bookCard button {
-  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.bookCard-header {
+  border-radius: 10px 10px 0 0;
+  text-align: left;
+  padding: 2rem 1rem 1rem;
+}
+.bookCard-content {
+  text-align: left;
+  padding: 0 1rem 1rem;
+}
+
+.bookCard-footer {
+  border-top: 1px solid #dbdbdb;
+  text-align: left;
+  padding: 1rem;
+}
+
+.favIcon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 20px;
+}
+.price {
+  font-size: 1.5rem;
+  text-align: right;
+}
+.genre {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.stock {
+  background-color: green;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.outOf {
+  background-color: grey;
+}
+
+input {
+  padding: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  border: none;
+  margin-left: 1rem;
 }

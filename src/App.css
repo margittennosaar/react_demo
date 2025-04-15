@@ -9,10 +9,3 @@ main {
 main h1 {
   padding: 2rem;
 }
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}

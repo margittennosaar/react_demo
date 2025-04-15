@@ -1,8 +1,8 @@
 import "./Footer.css";
-const Footer = (props) => {
+const Footer = ({ year }) => {
   return (
     <footer>
-      <p>Copyright &copy; Margit Tennosaar {props.year}</p>
+      <p>Copyright &copy; Margit Tennosaar {year}</p>
     </footer>
   );
 };

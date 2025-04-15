@@ -23,3 +23,19 @@ It demonstrates the use of React components, CSS styling, and modern JavaScript 
 - Enhanced the project structure by organizing components into a `Books` folder.
 - Improved reusability and modularity of components.
 - Updated styling for the new components.
+
+# Week 4
+
+- Enhanced the **Books Catalog** feature:
+  - Introduced a `searchValue` state in the `BookList` component to manage the search term.
+  - Updated the `BookList` component to include a search input field and display the search term dynamically.
+  - TODO for easter holiday: add a **search functionality** to filter books based on user input.
+- Added **event handlers** for user interactions:
+  - `toggleStock`: Toggles the `inStock` status of a book.
+  - `toggleFavorite`: Toggles the `isFavorite` status of a book.
+  - `eventHandler`: Logs when the "Read More" button is clicked.
+- Improved state management in the `BookList` component:
+  - Used `useState` to manage the `booksData` and `searchValue` states.
+  - Updated the `booksData` array dynamically based on user actions.
+- Updated the `BookCard` component to handle new props for toggling stock and favorite status.
+- Improved the overall user experience with better interactivity and dynamic rendering.
