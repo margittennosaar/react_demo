@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Books.css";
 
 const BookCard = ({
@@ -10,6 +9,8 @@ const BookCard = ({
   isFavorite,
   ...rest
 }) => {
+  console.log(rest);
+
   return (
     <div className="bookCard">
       <h2>{title}</h2>
