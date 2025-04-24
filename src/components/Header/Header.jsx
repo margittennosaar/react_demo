@@ -1,16 +1,18 @@
+import { Link } from "react-router";
 import "./Header.css";
 const Header = ({ name }) => {
   return (
     <header>
       <div className="logo">
-        <h2>{name}</h2>
+        <Link to="/">
+          <h2>{name}</h2>
+        </Link>
       </div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Persons</li>
-          <li>Books</li>
-          <li>About</li>
+          <Link to="/">Home</Link>
+          <Link to="/books">Books</Link>
+          <Link to="/about">About</Link>
         </ul>
       </nav>
     </header>
