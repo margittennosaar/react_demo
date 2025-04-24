@@ -39,3 +39,26 @@ It demonstrates the use of React components, CSS styling, and modern JavaScript 
   - Updated the `booksData` array dynamically based on user actions.
 - Updated the `BookCard` component to handle new props for toggling stock and favorite status.
 - Improved the overall user experience with better interactivity and dynamic rendering.
+
+# Week 5
+
+- Added **Search Functionality**:
+  - Implemented a feature to filter books based on the user's search input.
+  - Updated the `BookList` component to dynamically display books that match the search term.
+- **Implemented Routing**:
+  - Added `react-router` to enable routing in the application.
+  - Used `createBrowserRouter` to define and manage routes.
+  - Created routes for the following pages:
+    - `Home`: Displays the homepage.
+    - `Books Catalog`: Displays the list of books.
+    - `About`: Displays an About component.
+  - Updated `App.jsx` to use `createBrowserRouter` and `RouterProvider` for routing.
+- **Created Navigation**:
+  - Added links to navigate between components.
+- **Improved Project Structure**:
+  - Organized new components into different folders.
+- **Price Update Feature**:
+  - Added functionality to update the price of books dynamically.
+  - Introduced a new function in the `BookList` component to handle price changes.
+  - Updated the `BookCard` component to display the updated price.
+  - Ensured that price updates are reflected in the UI in real-time.

@@ -11,3 +11,12 @@ nav ul li {
   display: inline-block;
   padding: 1rem;
 }
+
+a {
+  margin: 1rem;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  border-bottom: 1px dashed white;
+}
