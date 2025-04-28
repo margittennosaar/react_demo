@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import "./AddBookForm.css";
 
 const AddBookForm = ({ onAddBook }) => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const AddBookForm = ({ onAddBook }) => {
     price: "",
     genre: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,50 +24,46 @@ const AddBookForm = ({ onAddBook }) => {
 
     const newBook = { ...formData, price: parseFloat(formData.price) };
 
-    /*     onAddBook(newBook);
-     */ console.log(newBook);
+    onAddBook(newBook);
+    navigate("/books");
 
     setFormData({ title: "", author: "", price: "", genre: "" });
   };
 
   return (
     <>
-      <Header name="Margit Tennosaar" />
-      <main>
-        <h1>Add new book</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Title"
-            value={formData.title}
-            onChange={handleChange}
-            name="title"
-          />
-          <input
-            type="text"
-            placeholder="Author"
-            value={formData.author}
-            onChange={handleChange}
-            name="author"
-          />
-          <input
-            type="number"
-            placeholder="Price"
-            value={formData.price}
-            onChange={handleChange}
-            name="price"
-          />
-          <input
-            type="text"
-            placeholder="Genre"
-            value={formData.genre}
-            onChange={handleChange}
-            name="genre"
-          />
-          <button type="submit">Add Book</button>
-        </form>
-      </main>
-      <Footer year={2025} />
+      <h1>Add new book</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Title"
+          value={formData.title}
+          onChange={handleChange}
+          name="title"
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={formData.author}
+          onChange={handleChange}
+          name="author"
+        />
+        <input
+          type="number"
+          placeholder="Price"
+          value={formData.price}
+          onChange={handleChange}
+          name="price"
+        />
+        <input
+          type="text"
+          placeholder="Genre"
+          value={formData.genre}
+          onChange={handleChange}
+          name="genre"
+        />
+        <button type="submit">Add Book</button>
+      </form>
     </>
   );
 };
