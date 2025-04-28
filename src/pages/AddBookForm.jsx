@@ -3,27 +3,27 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 const AddBookForm = ({ onAddBook }) => {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [price, setPrice] = useState("");
-  const [genre, setGenre] = useState("");
+  const [formData, setFormData] = useState({
+    title: "",
+    author: "",
+    price: "",
+    genre: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newBook = {
-      title,
-      author,
-      price: parseFloat(price),
-      genre,
-    };
+    const newBook = { ...formData, price: parseFloat(formData.price) };
 
-    onAddBook(newBook);
+    /*     onAddBook(newBook);
+     */ console.log(newBook);
 
-    setTitle("");
-    setAuthor("");
-    setPrice("");
-    setGenre("");
+    setFormData({ title: "", author: "", price: "", genre: "" });
   };
 
   return (
@@ -35,26 +35,30 @@ const AddBookForm = ({ onAddBook }) => {
           <input
             type="text"
             placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={formData.title}
+            onChange={handleChange}
+            name="title"
           />
           <input
             type="text"
             placeholder="Author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
+            value={formData.author}
+            onChange={handleChange}
+            name="author"
           />
           <input
             type="number"
             placeholder="Price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            value={formData.price}
+            onChange={handleChange}
+            name="price"
           />
           <input
             type="text"
             placeholder="Genre"
-            value={genre}
-            onChange={(e) => setGenre(e.target.value)}
+            value={formData.genre}
+            onChange={handleChange}
+            name="genre"
           />
           <button type="submit">Add Book</button>
         </form>
