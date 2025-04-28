@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { books } from "../../data/booksData";
 import BookCard from "./BookCard";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-const BookList = () => {
-  const [booksData, setBooksData] = useState(books);
+const BookList = ({ booksData, setBooksData }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const eventHandler = (id) => {
@@ -49,7 +47,6 @@ const BookList = () => {
 
   return (
     <>
-      <Header name="Margit Tennosaar" />
       <div className="books">
         <h1>Books catalog</h1>
         <label htmlFor="search">Search</label>
@@ -79,7 +76,6 @@ const BookList = () => {
           )}
         </div>
       </div>
-      <Footer year={2025} />
     </>
   );
 };

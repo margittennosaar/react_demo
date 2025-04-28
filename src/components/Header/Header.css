@@ -17,6 +17,12 @@ a {
   text-decoration: none;
   color: white;
 }
+
 a:hover {
+  border-bottom: 1px dashed white;
+}
+
+.active {
+  color: orange;
   border-bottom: 1px dashed white;
 }
