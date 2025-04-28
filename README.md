@@ -62,3 +62,20 @@ It demonstrates the use of React components, CSS styling, and modern JavaScript 
   - Introduced a new function in the `BookList` component to handle price changes.
   - Updated the `BookCard` component to display the updated price.
   - Ensured that price updates are reflected in the UI in real-time.
+
+# Week 6
+
+- **Add New Book Feature**:
+  - Implemented functionality to add a new book to the catalog.
+  - Created a form component to collect book details (e.g., title, author, price, and stock status).
+  - Ensured the new book is dynamically added to the `booksData` array and displayed in the `BookList` component.
+
+- **State Lifting**:
+  - Lifted the state for `booksData` from the `BookList` component to the `App` component.
+  - Centralized state management in the `App` component to improve data flow and maintainability.
+  - Updated the `BookList` and `BookCard` components to use props for accessing and updating state.
+
+- **Routing Fixes**:
+  - Refactored routing to use `Outlet` for nested routes.
+  - Updated `App.jsx` to define a layout component that includes shared elements (e.g., navigation) and renders child routes using `Outlet`.
+  - Ensured seamless navigation between pages and proper rendering of nested components.
