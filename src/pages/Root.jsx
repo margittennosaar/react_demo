@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 const Root = () => {
   return (
     <>
-      <Header name="Margit Tennosaar" />
+      <Header name="React DEMO app" />
       <main>
         <Outlet />
       </main>

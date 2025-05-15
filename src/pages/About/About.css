@@ -1,0 +1,20 @@
+.about-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: white;
+  color: #333;
+  border-radius: 5px;
+  padding: 4rem 10rem;
+  line-height: 2;
+}
+
+.about-container h2 {
+  margin: 2rem 0 1rem;
+}
+
+.about-container h3 {
+  margin: 1rem 0 0;
+}
+.about-container ul li {
+  list-style-type: none;
+}

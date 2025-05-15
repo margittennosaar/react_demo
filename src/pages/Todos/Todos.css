@@ -1,0 +1,17 @@
+.todo-selections {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-selections label {
+  margin: 0 0.5rem 0 2rem;
+  display: inline-block;
+}
+
+.todo-selections select {
+  width: 180px;
+  padding: 0.5rem;
+}

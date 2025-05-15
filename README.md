@@ -79,3 +79,28 @@ It demonstrates the use of React components, CSS styling, and modern JavaScript 
   - Refactored routing to use `Outlet` for nested routes.
   - Updated `App.jsx` to define a layout component that includes shared elements (e.g., navigation) and renders child routes using `Outlet`.
   - Ensured seamless navigation between pages and proper rendering of nested components.
+  
+- # Week 7
+
+  - Replaced `createBrowserRouter` with `BrowserRouter`, `Routes`, and `Route` to ensure components re-render correctly on state updates.
+  - Simplified route definitions and allowed dynamic props to be passed directly to components like `BookList` and `AddBookForm`.
+  - Ensured that the routing setup now supports live state updates and better maintainability.
+  - Introduced a toggle option in `BookList` to show only favorite books.
+
+- **Book Detail Page (`/books/:id`)**:
+  - Created a new route for individual book detail views.
+  - Used `useParams` and `useEffect` to fetch a single book based on its ID.
+  - Displayed detailed book information including title, author, genre, price, stock status, and favorite status.
+  - Introduced a "Go back" button using `useNavigate`.
+
+- **Bug Fixes and Improvements**:
+  - Fixed a critical issue where book updates (like price and toggle changes) didn’t trigger UI re-renders due to how props were passed in the router.
+  - Corrected the `handlePriceChange` function to avoid replacing the entire book object with a partial one.
+  - Ensured that `res.data` from `axios.patch()` is used to update local state accurately.
+  - Synced the `BookCard`'s local `price` state with props using `useEffect` to reflect updated values correctly after editing.
+
+- **Project Landing Page**:
+  - Added a `About.jsx` component to serve as the entry point of the app.
+  - Summarized the features of the app and explained its purpose as a school project.
+  - Linked the landing page into the routing structure for better user orientation.
+

@@ -1,22 +1,13 @@
-.books {
-  padding: 2rem;
-}
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem;
-}
-
 .bookCard {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #333;
   margin: 1rem;
   border-radius: 10px;
   width: 30%;
-  min-height: 200px;
+  min-height: 250px;
   position: relative;
 }
 
@@ -28,6 +19,9 @@
   border-radius: 10px 10px 0 0;
   text-align: left;
   padding: 2rem 1rem 1rem;
+}
+.bookCard-header h2 {
+  line-height: 1.1;
 }
 
 .bookCard-content {
@@ -44,7 +38,7 @@
 .favIcon {
   position: absolute;
   right: 1rem;
-  top: 1rem;
+  top: 0.5rem;
   font-size: 20px;
 }
 .price {
@@ -71,11 +65,21 @@
   background-color: grey;
 }
 
-input {
-  padding: 1rem;
-  font-family: inherit;
-  font-size: inherit;
-  border-radius: 5px;
+.secondary {
+  color: #333;
+  background-color: transparent;
+  padding: 0 1rem 0 0;
+  margin: 0;
+  border-radius: none;
+  font-weight: 500;
   border: none;
-  margin: 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.secondary:hover {
+  border: transparent;
+  color: #1279cc;
+  font-weight: 500;
+  cursor: pointer;
 }
