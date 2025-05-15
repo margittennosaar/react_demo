@@ -1,0 +1,33 @@
+.books-selections {
+  max-width: 235px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+input {
+  padding: 1rem;
+  width: 200px;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+  margin: 1rem 0.5rem 0 0;
+  background: green;
+}
+
+.books-selections label {
+  text-align: left;
+  display: inline-block;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}

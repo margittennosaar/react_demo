@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Jost", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #a00707;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 25, 36, 1) 0%,
+    rgba(0, 42, 56, 1) 100%
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +22,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 body {
@@ -27,7 +37,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
 }
 

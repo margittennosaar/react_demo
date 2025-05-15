@@ -9,3 +9,8 @@ main {
 main h1 {
   padding: 2rem;
 }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}

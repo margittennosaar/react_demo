@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./Books.css";
+import "./BookCard.css";
+import { Link } from "react-router";
 
 const BookCard = ({
   title,
@@ -8,25 +9,24 @@ const BookCard = ({
   genre,
   inStock,
   isFavorite,
-  onEventHandler,
   id,
   onToggleStock,
   onToggleFavorite,
   onPriceChange,
-  ...rest
 }) => {
-  const [isEditing, setIsEdititng] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const [newPrice, setNewPrice] = useState(price);
 
   const handleSave = () => {
-    onPriceChange(id, newPrice);
-    setIsEdititng(!isEditing);
+    onPriceChange(id, parseFloat(newPrice));
+    setIsEditing(false);
   };
 
   const handleCancel = () => {
     setNewPrice(price);
-    setIsEdititng(!isEditing);
+    setIsEditing(false);
   };
+  const handleDetails = () => {};
 
   const isSaveDisabled =
     newPrice === "" || parseFloat(newPrice) === parseFloat(price);
@@ -36,7 +36,7 @@ const BookCard = ({
       <div className="bookCard-header">
         <p
           className={inStock ? "stock" : "stock outOf"}
-          onClick={() => onToggleStock(id)}
+          onClick={onToggleStock}
         >
           {inStock ? "In stock" : "Out of Stock"}
         </p>
@@ -50,7 +50,7 @@ const BookCard = ({
       <div className="bookCard-content">
         {isEditing ? (
           <input
-            type="text"
+            type="number"
             value={newPrice}
             onChange={(e) => setNewPrice(e.target.value)}
           />
@@ -59,8 +59,11 @@ const BookCard = ({
         )}
       </div>
       <div className="bookCard-footer">
-        <button onClick={onEventHandler}>See more</button>
-        {!inStock && <button>Add to Wishlist</button>}
+        <Link className="secondary" to={`/books/${id}`}>
+          See more
+        </Link>
+
+        {!inStock && <button className="secondary">Add to Wishlist</button>}
 
         {isEditing ? (
           <>
@@ -70,7 +73,9 @@ const BookCard = ({
             <button onClick={handleCancel}>Cancel</button>
           </>
         ) : (
-          <button onClick={() => setIsEdititng(!isEditing)}>Edit</button>
+          <button className="secondary" onClick={() => setIsEditing(true)}>
+            Edit
+          </button>
         )}
       </div>
     </div>
